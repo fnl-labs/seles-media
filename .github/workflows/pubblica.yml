@@ -1,0 +1,36 @@
+name: Pubblica i post in coda
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # ogni 10 minuti (orario UTC)
+  workflow_dispatch:          # e a mano, dal tab Actions
+
+concurrency:
+  group: pubblicazione
+  cancel-in-progress: false
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pubblica ciò che ha raggiunto la sua ora
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+        run: python3 publish_queued.py
+
+      - name: Sposta in pubblicati/ ciò che è uscito
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain coda pubblicati)" ]; then
+            git config user.name "seles-bot"
+            git config user.email "actions@github.com"
+            git add coda pubblicati
+            git commit -m "Pubblicati i post in scadenza"
+            git push
+          fi
