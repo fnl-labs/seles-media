@@ -73,6 +73,9 @@ def pubblica_fb(urls, caption):
 def main():
     if not (TOKEN and PAGE and IG):
         print("✗ mancano i secret META_PAGE_TOKEN / META_PAGE_ID / META_IG_USER_ID"); sys.exit(1)
+    # verifica token: se non è valido, il run fallisce subito e si vede nel tab Actions
+    me = api("GET", "me", fields="id,name")
+    print(f"✓ token valido · {me.get('name')} · {me.get('id')}")
     FATTI.mkdir(exist_ok=True)
     adesso = datetime.datetime.now(datetime.timezone.utc)
     fatti_ora = []
