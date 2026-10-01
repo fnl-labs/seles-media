@@ -2,8 +2,8 @@ name: Pubblica i post in coda
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # ogni 10 minuti (orario UTC)
-  workflow_dispatch:          # e a mano, dal tab Actions
+    - cron: "*/10 * * * *"   # rete di sicurezza: ogni 10 minuti (GitHub può ritardare)
+  workflow_dispatch:          # avvio puntuale: lo lancia la "sveglia" su Cloudflare
 
 concurrency:
   group: pubblicazione
@@ -15,7 +15,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      # ref: main → scarica la coda com'è ADESSO, non com'era quando il run è stato
+      # messo in fila: così due run consecutivi non pubblicano due volte lo stesso post
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Pubblica ciò che ha raggiunto la sua ora
         env:
