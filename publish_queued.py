@@ -22,6 +22,20 @@ import os, sys, json, time, pathlib, datetime, urllib.request, urllib.parse, url
 ROOT = pathlib.Path(__file__).resolve().parent
 CODA, FATTI = ROOT / "coda", ROOT / "pubblicati"
 BASE_URL = "https://fnl-labs.github.io/seles-media"
+# piano B: il file servito direttamente dalla repo, disponibile appena fatto il push
+# (GitHub Pages a volte resta in coda per molti minuti prima di pubblicare)
+RAW_URL = "https://raw.githubusercontent.com/fnl-labs/seles-media/main"
+
+def url_immagine(path):
+    for base in (BASE_URL, RAW_URL):
+        u = f"{base}/{path}"
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, method="HEAD"), timeout=20) as r:
+                if r.status == 200 and r.headers.get("content-type", "").startswith("image/"):
+                    return u
+        except Exception:
+            pass
+    raise RuntimeError(f"immagine non raggiungibile: {path}")
 VER = os.environ.get("META_API_VERSION", "v23.0")
 API = f"https://graph.facebook.com/{VER}"
 TOKEN = os.environ.get("META_PAGE_TOKEN", "")
@@ -91,7 +105,7 @@ def main():
         if quando.tzinfo is None: quando = quando.replace(tzinfo=datetime.timezone.utc)
         if quando > adesso:
             print(f"· {f.name}: non ancora ({quando.isoformat()})"); continue
-        urls = [f"{BASE_URL}/{p}" for p in post["immagini"]]
+        urls = [url_immagine(p) for p in post["immagini"]]
         cap = post.get("didascalia", "")
         esiti = {}
         for dove in post.get("dove", ["ig", "fb"]):
