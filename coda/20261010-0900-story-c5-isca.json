@@ -1,7 +1,8 @@
 {
   "quando": "2026-10-10T09:00:00+02:00",
   "dove": [
-    "ig_story"
+    "ig_story",
+    "fb_story"
   ],
   "immagini": [
     "media/20261010-story-md-c5-g03-isca.jpg"

@@ -79,6 +79,11 @@ def pubblica_storia(urls):
     r = api("POST", f"{IG}/media_publish", creation_id=c["id"])
     return f"storia Instagram {r['id']}"
 
+def pubblica_storia_fb(urls):
+    ph = api("POST", f"{PAGE}/photos", url=urls[0], published="false")
+    r = api("POST", f"{PAGE}/photo_stories", photo_id=ph["id"])
+    return f"storia Facebook {r.get('post_id') or ph['id']}"
+
 def pubblica_fb(urls, caption):
     if len(urls) == 1:
         r = api("POST", f"{PAGE}/photos", url=urls[0], message=caption)
@@ -116,6 +121,7 @@ def main():
             try:
                 if dove == "ig": esiti[dove] = pubblica_ig(urls, cap)
                 elif dove == "ig_story": esiti[dove] = pubblica_storia(urls)
+                elif dove == "fb_story": esiti[dove] = pubblica_storia_fb(urls)
                 else: esiti[dove] = pubblica_fb(urls, cap)
                 print(f"✓ {f.name} → {dove}: {esiti[dove]}")
             except Exception as e:

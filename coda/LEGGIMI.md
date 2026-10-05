@@ -14,6 +14,6 @@ sposta il file in `../pubblicati/` con dentro i link dei post usciti.
 ```
 
 - `quando`: ora italiana, con il fuso (`+02:00` d'estate, `+01:00` d'inverno).
-- `dove`: `ig`, `fb`, o entrambi; `ig_story` per una storia Instagram (1080×1920, senza didascalia).
+- `dove`: `ig`, `fb`, o entrambi; `ig_story` / `fb_story` per una storia su Instagram / sulla Pagina Facebook (1080×1920, senza didascalia).
 - `immagini`: percorsi dentro questa repo (fino a 10 = carosello).
 - GitHub può far partire il controllo con qualche minuto di ritardo: normale.
