@@ -105,6 +105,10 @@ def main():
         if quando.tzinfo is None: quando = quando.replace(tzinfo=datetime.timezone.utc)
         if quando > adesso:
             print(f"· {f.name}: non ancora ({quando.isoformat()})"); continue
+        # nei run del cron (rete di sicurezza) i primi 5 minuti sono della sveglia,
+        # che pubblica da sola: così non si pubblica due volte lo stesso post
+        if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and adesso - quando < datetime.timedelta(minutes=5):
+            print(f"· {f.name}: appena scaduto, lascio alla sveglia"); continue
         urls = [url_immagine(p) for p in post["immagini"]]
         cap = post.get("didascalia", "")
         esiti = {}
