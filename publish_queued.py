@@ -9,7 +9,7 @@ pubblica su Instagram e/o Facebook, poi lo sposta in pubblicati/.
 Un post in coda è un JSON così:
 {
   "quando": "2026-09-27T00:00:00+02:00",   ora locale italiana
-  "dove": ["ig", "fb"],
+  "dove": ["ig", "fb"],          oppure ["ig_story"] per una storia Instagram
   "immagini": ["media/20260927-match-c11.jpg"],
   "didascalia": "testo del post..."
 }
@@ -59,6 +59,12 @@ def pubblica_ig(urls, caption):
     r = api("POST", f"{IG}/media_publish", creation_id=c["id"])
     return api("GET", r["id"], fields="permalink").get("permalink", r["id"])
 
+def pubblica_storia(urls):
+    c = api("POST", f"{IG}/media", image_url=urls[0], media_type="STORIES")
+    attendi(c["id"])
+    r = api("POST", f"{IG}/media_publish", creation_id=c["id"])
+    return f"storia Instagram {r['id']}"
+
 def pubblica_fb(urls, caption):
     if len(urls) == 1:
         r = api("POST", f"{PAGE}/photos", url=urls[0], message=caption)
@@ -90,7 +96,9 @@ def main():
         esiti = {}
         for dove in post.get("dove", ["ig", "fb"]):
             try:
-                esiti[dove] = pubblica_ig(urls, cap) if dove == "ig" else pubblica_fb(urls, cap)
+                if dove == "ig": esiti[dove] = pubblica_ig(urls, cap)
+                elif dove == "ig_story": esiti[dove] = pubblica_storia(urls)
+                else: esiti[dove] = pubblica_fb(urls, cap)
                 print(f"✓ {f.name} → {dove}: {esiti[dove]}")
             except Exception as e:
                 esiti[dove] = f"ERRORE: {e}"; print(f"✗ {f.name} → {dove}: {e}")
