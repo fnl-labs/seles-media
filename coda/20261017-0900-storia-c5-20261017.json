@@ -1,0 +1,17 @@
+{
+  "quando": "2026-10-17T09:00:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261017-0900-storia-c5-20261017.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "C5",
+    "quando": "2026-10-17T18:30:00",
+    "casa": "Italia 90 Roccelletta",
+    "ospite": "Seles Gioiosa"
+  }
+}
