@@ -1,0 +1,23 @@
+{
+  "quando": "2026-10-17T08:30:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261017-0830-storia-u17-20261017.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "U17",
+    "quando": "2026-10-17T15:00:00",
+    "casa": "Seles Gioiosa",
+    "ospite": "Palmese 1912"
+  },
+  "esiti": {
+    "ig_story": "storia Instagram 18447874600123375",
+    "fb_story": "storia Facebook 1691644695952448"
+  },
+  "pubblicato_il": "2026-10-17T06:30:31.310Z",
+  "da": "sveglia"
+}
