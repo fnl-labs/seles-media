@@ -1,0 +1,17 @@
+{
+  "quando": "2026-10-18T09:00:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261018-0900-storia-c11-20261018.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "C11",
+    "quando": "2026-10-18T15:30:00",
+    "casa": "Sant'Onofrio Calcio",
+    "ospite": "Seles Gioiosa"
+  }
+}
