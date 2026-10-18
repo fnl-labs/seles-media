@@ -1,0 +1,23 @@
+{
+  "quando": "2026-10-18T08:30:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261018-0830-storia-u15-20261018.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "U15",
+    "quando": "2026-10-18T09:30:00",
+    "casa": "Gioiosa Marina",
+    "ospite": "Seles Gioiosa"
+  },
+  "esiti": {
+    "ig_story": "storia Instagram 18143209951718043",
+    "fb_story": "storia Facebook 1647891060152777"
+  },
+  "pubblicato_il": "2026-10-18T06:30:41.226Z",
+  "da": "sveglia"
+}
