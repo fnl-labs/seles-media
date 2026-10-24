@@ -1,0 +1,23 @@
+{
+  "quando": "2026-10-24T08:30:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261024-0830-storia-c5-20261024.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "C5",
+    "quando": "2026-10-24T18:00:00",
+    "casa": "Seles Gioiosa",
+    "ospite": "Maestrelli C5"
+  },
+  "esiti": {
+    "ig_story": "storia Instagram 18500033392101132",
+    "fb_story": "storia Facebook 1313611761846521"
+  },
+  "pubblicato_il": "2026-10-24T06:31:45.267Z",
+  "da": "sveglia"
+}
