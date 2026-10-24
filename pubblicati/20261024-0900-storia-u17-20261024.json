@@ -1,0 +1,23 @@
+{
+  "quando": "2026-10-24T09:00:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261024-0900-storia-u17-20261024.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "U17",
+    "quando": "2026-10-24T18:00:00",
+    "casa": "Audax Locri",
+    "ospite": "Seles Gioiosa"
+  },
+  "esiti": {
+    "ig_story": "storia Instagram 18139167349637894",
+    "fb_story": "storia Facebook 1142939958413345"
+  },
+  "pubblicato_il": "2026-10-24T07:01:24.934Z",
+  "da": "sveglia"
+}
