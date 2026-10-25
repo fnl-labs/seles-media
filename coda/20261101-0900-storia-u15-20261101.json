@@ -1,0 +1,17 @@
+{
+  "quando": "2026-11-01T09:00:00+01:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261101-0900-storia-u15-20261101.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "U15",
+    "quando": "2026-11-01T09:30:00",
+    "casa": "Reggina 1914",
+    "ospite": "Seles Gioiosa"
+  }
+}
