@@ -1,0 +1,23 @@
+{
+  "quando": "2026-10-25T09:00:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261025-0900-storia-c11-20261025.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "C11",
+    "quando": "2026-10-25T14:30:00",
+    "casa": "Seles Gioiosa",
+    "ospite": "Stella Mileto"
+  },
+  "esiti": {
+    "ig_story": "storia Instagram 18109953698132343",
+    "fb_story": "storia Facebook 1416687391521622"
+  },
+  "pubblicato_il": "2026-10-25T07:01:43.543Z",
+  "da": "sveglia"
+}
