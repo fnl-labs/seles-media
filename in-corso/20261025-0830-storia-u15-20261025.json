@@ -1,0 +1,17 @@
+{
+  "quando": "2026-10-25T08:30:00+02:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261025-0830-storia-u15-20261025.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "U15",
+    "quando": "2026-10-25T10:30:00",
+    "casa": "Seles Gioiosa",
+    "ospite": "Segato"
+  }
+}
