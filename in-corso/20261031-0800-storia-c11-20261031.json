@@ -1,0 +1,17 @@
+{
+  "quando": "2026-10-31T08:00:00+01:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261031-0800-storia-c11-20261031.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "C11",
+    "quando": "2026-10-31T14:30:00",
+    "casa": "Tropea FC",
+    "ospite": "Seles Gioiosa"
+  }
+}
