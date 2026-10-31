@@ -1,0 +1,23 @@
+{
+  "quando": "2026-10-31T08:30:00+01:00",
+  "dove": [
+    "ig_story",
+    "fb_story"
+  ],
+  "immagini": [
+    "media/20261031-0830-storia-u17-20261031.jpg"
+  ],
+  "didascalia": "",
+  "partita": {
+    "squadra": "U17",
+    "quando": "2026-10-31T15:00:00",
+    "casa": "Seles Gioiosa",
+    "ospite": "Taurianova 1995"
+  },
+  "esiti": {
+    "ig_story": "storia Instagram 17962499937246233",
+    "fb_story": "storia Facebook 1131314113159566"
+  },
+  "pubblicato_il": "2026-10-31T07:30:38.790Z",
+  "da": "sveglia"
+}
